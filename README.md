@@ -9,3 +9,4 @@ Par exemple, la fonction analogRead() ne fonctionnera pas sur le RaspberryPi qui
 Ce dépôt est téléchargeable sous forme d'une archive autonome facile à extraire où bon vous semble sur votre minipc : les codes seront immédiatement testables si la librairie Pyduino est bien installée. 
 
 
+Test de changement en ligne. 
