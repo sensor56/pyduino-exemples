@@ -10,6 +10,3 @@ Ce dépôt est téléchargeable sous forme d'une archive autonome facile à extr
 
 * La librairie Pyduino est à télécharger ici : https://github.com/sensor56/pyDuino
 * La documentation de la librairie Pyduino est ici : http://www.mon-club-elec.fr/pmwiki_reference_pyduino/pmwiki.php?n=Main.HomePage
-
-Test de changement en ligne. 
-Re test de changement en ligne... 
