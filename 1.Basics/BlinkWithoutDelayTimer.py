@@ -18,7 +18,7 @@ delai=0.25 # pause   a utiliser en secondes
 
 #--- setup --- 
 def setup():
-  
+	
 	pinMode(LED,OUTPUT) # met la broche en sortie
 	Serial.println("La broche " +str(LED)+ " est en sortie !")
 
@@ -47,7 +47,7 @@ def timerLEDEvent():
 		Serial.println("La LED est eteinte !") 
 		etatLED=LOW # memorise etat LED
 
-	Timer(0.25, timerLEDEvent).start() # relance le timer
+	Timer(delai, timerLEDEvent).start() # relance le timer
 		
 	
 #--- obligatoire pour lancement du code -- 
