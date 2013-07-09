@@ -17,7 +17,7 @@ delai=1000 # pause
 
 #--- setup --- 
 def setup():
-  pinMode(LED,OUTPUT) # met la broche en sortie
+	pinMode(LED,OUTPUT) # met la broche en sortie
 	Serial.println("La broche " +str(LED)+ " est en sortie !")
 
 # -- fin setup -- 
@@ -29,6 +29,7 @@ def loop():
 	
 	if millis()-millis0>delai : # si delai ecoule
 		toggle(LED)  # inverse etat de la LED
+		Serial.println("LED clignote")
 		millis0=millis() # memorise millis courant
 	
 	# autres instructions ici 
@@ -39,5 +40,7 @@ def loop():
 if __name__=="__main__": # pour rendre le code executable 
 	setup() # appelle la fonction setup
 	while not noLoop: loop() # appelle fonction loop sans fin
+
+
 
 
