@@ -1,4 +1,4 @@
-!/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # exemple pyDUino - par X. HINAULT - www.mon-club-elec.fr
