@@ -18,7 +18,7 @@ filepathAudio=""
 
 #--- setup --- 
 def setup():
-  pinMode(BP,PULLUP) # met la broche en entree avec rappel au plus actif
+	pinMode(BP,PULLUP) # met la broche en entree avec rappel au plus actif
 	Serial.println("La broche 2 est en entree avec rappel au plus actif !")
 	
 	global filepathAudio, filename
