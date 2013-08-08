@@ -34,8 +34,4 @@ def loop():
 #--- obligatoire pour lancement du code -- 
 if __name__=="__main__": # pour rendre le code executable 
 	setup() # appelle la fonction main
-	while(1): loop() # appelle fonction loop sans fin
-
-
-
-
+	while not noLoop: loop() # appelle fonction loop sans fin
