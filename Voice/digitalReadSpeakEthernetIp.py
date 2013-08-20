@@ -16,7 +16,7 @@ APPUI=LOW # valeur broche lors appui
 
 #--- setup --- 
 def setup():
-  pinMode(BP,PULLUP) # met la broche en entree avec rappel au plus actif
+	pinMode(BP,PULLUP) # met la broche en entree avec rappel au plus actif
 	Serial.println("La broche 2 est en entree avec rappel au plus actif !")
 
 # -- fin setup -- 
@@ -28,8 +28,15 @@ def loop():
 		Serial.println("Appui BP!")
 		
 		Serial.println ("Adresse ip du systeme : " + Ethernet.localIP() ) # affiche l'adresse IP locale
-		
+
 		ipSystem=Ethernet.localIP().split(".") # recupere l'ip sous forme d'une list 
+		
+		# message console 
+		print ("Message en synthese vocale :")
+		print ("L'adresse I P du systaime est la suivante : ")
+		print (ipSystem[0] + ". point. " + ipSystem[1] + ". point. " + ipSystem[2] + ". point. " + ipSystem[3] )
+
+		# synthese vocale 
 		speak("L'adresse I P du systaime est la suivante : ")
 		speak (ipSystem[0] + ". point. " + ipSystem[1] + ". point. " + ipSystem[2] + ". point. " + ipSystem[3] )
 		# les "." permettent de ralentir la diction...
@@ -44,3 +51,7 @@ def loop():
 if __name__=="__main__": # pour rendre le code executable 
 	setup() # appelle la fonction main
 	while not noLoop: loop() # appelle fonction loop sans fin
+
+
+
+
