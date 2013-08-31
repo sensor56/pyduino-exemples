@@ -39,7 +39,7 @@ def setup():
 	refTime=datetime.datetime(int(year()), int(month()), int(day())) # date a utiliser - heure 00:00:00 si pas precise
 	print refTime
 	
-	for t in range(1440) : # defile 1440 secondes theoriques
+	for t in range(1440) : # defile 1440 minutes theoriques
 		dataValue=str(random(0,1023)) # genere une valeur aleatoire entiere
 		
 		dataTime=refTime+datetime.timedelta(0, t*60) # jours, secondes - ici toutes les minutes
