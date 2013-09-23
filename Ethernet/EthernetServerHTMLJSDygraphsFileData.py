@@ -115,6 +115,7 @@ def pageHTML():
 	labels: [ "x", "y="], // labels series
 	width : 800, // largeur
 	height: 600, // hauteur
+	valueRange: [0,1023], // plage valeurs Y
 	showRangeSelector: true // affiche l'outil de selection plage voulue 
 	"""
 	# Attention, pas de , pour la derniere ligne !
