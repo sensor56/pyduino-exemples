@@ -54,7 +54,7 @@ def loop():
 	#-- ajout de chaines au fichier 
 	
 	#out=(str(compt)+":"+nowdatetime()+": "+ str(mesure) + " soit " + str(mesuremV) + " millivolts.")
-	out=today('/')+" "+ hour()+":"+minute()+":"+second() +" " + str(mesure) 
+	out=today('/')+" "+ hour()+":"+minute()+":"+second() +", " + str(mesure) 
 	
 	myFile.write(out+"\n") # ecriture d'une ligne
 	
