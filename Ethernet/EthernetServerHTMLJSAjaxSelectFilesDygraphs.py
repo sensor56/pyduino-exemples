@@ -139,7 +139,7 @@ def pageInitialeHTMLJS():
 	
 	path=homePath()+myDataPath  # chemin du répertoire à utiliser
 	#filename="testdata.txt" # nom du fichier
-	filename="data"+today("_",-1)+".txt" # nom du fichier du jour 
+	filename="data_"+today("_",-1)+".txt" # nom du fichier du jour 
 	filepath=path+filename # chemin du fichier
 	
 	#-- lecture du fichier -- 
