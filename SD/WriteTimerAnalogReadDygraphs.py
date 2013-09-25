@@ -24,7 +24,7 @@ def setup():
 	myDataPath=("data/text/")
 	
 	path=homePath()+myDataPath  # chemin du répertoire à utiliser
-	filename="data"+today()+".txt" # nom du fichier
+	filename="data_"+today("_",-1)+".txt" # nom du fichier
 	filepath=path+filename # chemin du fichier
 	
 	print filepath
@@ -54,7 +54,18 @@ def loop():
 	#-- ajout de chaines au fichier 
 	
 	#out=(str(compt)+":"+nowdatetime()+": "+ str(mesure) + " soit " + str(mesuremV) + " millivolts.")
-	out=today('/')+" "+ hour()+":"+minute()+":"+second() +", " + str(mesure) 
+	out=today('/', -1)+" "+ hour()+":"+minute()+":"+second() +", " + str(mesure) # format today inversé... 
+	
+	"""
+	Les formats possibles dygraphs sont :
+	
+	2009-07-12
+	2009/07/12
+	2009/07/12 12
+	2009/07/12 12:34
+	2009/07/12 12:34:56
+	voir : http://dygraphs.com/data.html
+	"""
 	
 	myFile.write(out+"\n") # ecriture d'une ligne
 	
