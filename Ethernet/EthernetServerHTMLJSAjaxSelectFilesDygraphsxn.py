@@ -218,6 +218,7 @@ def pageInitialeHTMLJS():
 	width : 800, // largeur
 	height: 400, // hauteur
 	//valueRange: [0,4095], // plage valeurs Y
+	interactionModel: Dygraph.defaultInteractionModel, // interaction souris 
 	showRangeSelector: true // affiche l'outil de selection plage voulue 
 	"""
 	) # fin optionsGraph 
