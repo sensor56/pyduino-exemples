@@ -376,6 +376,7 @@ def pageInitialeHTMLJS():
 			
 			// met a jour donnees a partir chaine recue
 			g.updateOptions( { 'file': stringDataIn } ); // met a jour les donnees du graphique
+			g.resetZoom(); // reinitialise zoom
 			
 			// recupere derniere valeur
 			textInputDygraphs.value=Number(g.getValue(0,g.numColumns()-1) ); // derniere valeur du graphique
