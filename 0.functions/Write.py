@@ -10,7 +10,7 @@
 from pyduino import * # importe les fonctions Arduino pour Python
 
 # entete declarative
-noLoop=
+noLoop=True
 
 #--- setup --- 
 def setup():
