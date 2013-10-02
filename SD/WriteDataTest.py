@@ -18,7 +18,7 @@ def setup():
 	myDataPath=("data/text/")
 	
 	path=homePath()+myDataPath  # chemin du répertoire à utiliser
-	filename="testdata.txt" # nom du fichier
+	filename="test.txt" # nom du fichier
 	filepath=path+filename # chemin du fichier
 	
 	print filepath
@@ -32,20 +32,21 @@ def setup():
 	myFile=open(filepath,'w') # ouverture pour ecriture avec effacement contenu
 	
 	#-- ajout de chaines au fichier 
-	hh=str(hour())
-	mm=str(minute())
+	HH=str(hour())
+	MM=str(minute())
 	
-	for sec in range(60) : # defile 60 secondes theoriques
+	for SS in range(60) : # defile 60 secondes theoriques
 		dataValue=str(random(0,1023)) # genere une valeur aleatoire entiere
 		
-		# format de donnees utilise : JJ/MM/YYYY hh:mm:ss , val \n
-		dataLine=today('/') + " " + hh +":"+mm + ":" + str(sec)+","+dataValue+"\n"
+		# format de donnees utilise : yyyy:mm:jj HH:MM:SS , val \n
+		dataLine=today('/',-1) + " " + HH +":"+MM + ":" + str(SS)+","+dataValue+"\n"
+		#dataLine=nowdatetime(-1)+","+dataValue+"\n" # equivalent avec heure courante
 		#print dataLine - debug
 		myFile.write(dataLine) # ecrit la ligne dans le fichier
 	
 	myFile.close() # fermeture du fichier en ecriture
 	
-	#-- lecture du fichier -- 
+	#-- lecture du fichier = verification -- 
 	myFile=open(filepath,'r') # ouverture en lecture
 	print ("Contenu du fichier : ")
 	myFile.seek(0) # se met au debut du fichier
