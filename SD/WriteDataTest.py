@@ -70,5 +70,3 @@ if __name__=="__main__": # pour rendre le code executable
 	while not noLoop: loop() # appelle fonction loop sans fin
 
 
-
-
