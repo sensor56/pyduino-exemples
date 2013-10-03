@@ -52,7 +52,7 @@ def loop():
 	compt=compt+1 # incrémente compteur
 	if compt>=nombreMesures:exit()  # stop quand nombre de mesures atteint
 	
-	timer(intervalMesure*1000, loop) # auto appel de loop toutes les secondes
+	timer(intervalMesure*1000, loop) # auto appel de loop toutes les n secondes
 	
 # -- fin loop --
 
