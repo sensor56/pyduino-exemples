@@ -48,17 +48,18 @@ def loop():
 	
 	print requete # affiche requete recue
 	
-	#--- reponse serveur --- 
+	#--- preparation reponse serveur --- 
 	reponse=( # ( ... ) pour permettre multiligne.. 
 	httpResponse() # entete http OK 200 automatique fournie par la librairie Pyduino
 	
-	# contenu page - ici date / heure du serveur et mesure nalogique A2
+	# contenu page 
 	+
 	
 	pageHTML() # voir la fonction separee - pour clarte du code
 	
 	+"\n") # fin reponse 
 	
+	# envoi reponse serveur 
 	serverHTTP.writeDataTo(clientDistant, reponse) # envoie donnees vers client d'un coup
 	
 	print "Reponse envoyee au client distant : "
@@ -78,7 +79,7 @@ def loop():
 #--- fonction fournissant la page HTML --- 
 def pageHTML():
 	
-	pageHTML=( # debut page HTML 
+	pageHTML=( # debut page HTML - copier/coller ici page HTML 
 """
 <!DOCTYPE html>
 <html>
