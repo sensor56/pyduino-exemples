@@ -133,11 +133,15 @@ def pageInitialeHTMLJS():
 	
 	optionsFiles=""
 	
+	# ajoute en premier option choisir 
+	optionsFiles=optionsFiles+"\t\t\t<option value=\"Choisir\" label=\"Choisir\">Choisir un fichier</option> \n"
+	
 	for filename in files:
 		print filename
 		
 		optionsFiles=optionsFiles+"\t\t\t<option value=\""+filename+"\" label=\""+filename+"\">"+filename+"</option> \n"
-		print optionsFiles
+	
+	print optionsFiles # debug
 		
 	contenuPageInitialeHTMLJS=( # debut page HTML 
 """
@@ -251,6 +255,8 @@ optionsFiles
 +
 """
 		</select>
+		
+		<br/>
 	
 	<textarea id="text" rows="30" cols="100"></textarea>
 	
@@ -270,8 +276,11 @@ def reponseAJAX(indexIn):
 	# definition des variables a uiliser dans la reponse
 	global files
 	
+	if indexIn==0:
+		return "Sélectionner un fichier" # si choix "Choisir" 
+	
 	dirPath=homePath()+"data/text/"
-	filename=files[indexIn]
+	filename=files[indexIn-1] # -1 pour prendre compte option choisir
 	filepath=dirPath+filename
 	
 	print filepath
@@ -288,9 +297,9 @@ def reponseAJAX(indexIn):
 	# la reponse
 	reponseAjax=( # debut page reponse AJAX
 	
-	filename # renvoie le nom du fichier 
-	+"\n"
-	+ fileContent  # contenu du fichier
+	#filename # renvoie le nom du fichier 
+	#+"\n"
+	fileContent  # contenu du fichier
 	
 )  # fin page reponse AJAX
 	return reponseAjax# la fonction renvoie la page HTML
