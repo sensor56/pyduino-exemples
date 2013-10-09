@@ -166,18 +166,14 @@ def pageInitialeHTMLJS():
 		 
 			
 			//--- liste fichier dans liste deroulante 
-			$scope.choixPossibles=["""
-			+
-			optionsFiles
-			+
-			"""];   // liste des choix 
+			$scope.choixPossibles=["""+optionsFiles+"""];   // liste des choix 
 			$scope.choixSelect=0; // choix par defaut 
 			
 			//--- requete Ajax
 			
 			$scope.dataText="Aucunes donnees"; 
 			
-			$scope.onChangeSelect=function(){
+			$scope.onChangeSelect=function(){ // fonction appelee sur modif liste deroulante 
 			
 				$http({method: 'GET', url: '/ajax='+$scope.choixSelect+'='}) // definition requete AJAX format GET /ajax=index=
 					.success(function(data, status, headers, config) { // gestion reception 
@@ -189,6 +185,7 @@ def pageInitialeHTMLJS():
 			}// fin onChangeSelect
 			
 		} // fin function mainCtrl 
+		
 		//-->
 		</script>
 		<!-- Fin du code Javascript -->
